@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="lt-ie10" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NSX 365</title>
+  <!-- <link href="/public/assets/css/foundation.css" rel="stylesheet" type="text/css" />  -->
+  <link href="/public/assets/css/twentytwenty.css" rel="stylesheet" type="text/css" />
+  <link href="/public/assets/css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+  <body>
+
+
+	<div class="splash">
+      <!-- LEFT HERE IN CASE WE WANNA SPLASH IMAGE  -->
+		<!-- <img src="/public/assets/img/nsx-ray-splash.png"> -->
+	</div>
+
+  <div class="nsx-logo">
+    <img src="/public/assets/img/365/nsx-logo-code.svg">
+  </div>
+
+    <div class="">
+      <div class="">
+        <div class="twentytwenty-container">
+          <img src="/public/assets/img/365/old.png" />
+          <img src="/public/assets/img/365/new.png" />
+        </div>
+      </div>
+    </div>
+    
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="/public/assets/js/jquery.event.move.js"></script>
+    <script src="/public/assets/js/jquery.twentytwenty.js"></script>
+    <script>
+    $(window).load(function(){
+
+    	$(".splash").on('click', function(){
+    		$(".splash").fadeOut(500);
+    	});
+
+      	$(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+      	$(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+    });
+    </script>
+  </body>
+</html>

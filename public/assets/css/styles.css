@@ -1,0 +1,32 @@
+
+body {
+  margin: 0;
+}
+
+.splash {
+  position: absolute;
+  display: block;
+  float: none;
+  width: 101%;
+  height: auto;
+  z-index: 99999;
+  top: -10px;
+  background: #000;
+
+}​
+
+.column, .columns {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+}
+
+.nsx-logo {
+  z-index: 9999999;
+  display: block;
+  position: absolute;
+  width: 35em;
+  right: 30%;
+  top: 30%;
+}

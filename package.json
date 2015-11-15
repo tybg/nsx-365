@@ -1,0 +1,32 @@
+{
+  "name": "nsx-365",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "express": "~4.13.3",
+    "handlebars-helpers": "^0.5.8",
+    "hbs": "~3.0.1",
+    "basic-auth-connect": "*",
+    "reload": "~0.3.0",
+    "supervisor": "~0.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tybg/nsx-365"
+  },
+  "author": "Marten",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "http://nsx-365.herokuapp.com",
+  "subdomain": "",
+  "engines": {
+    "node": "0.10.x"
+  }
+}
