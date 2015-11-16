@@ -9,14 +9,14 @@ body {
 }
 
 .splash {
-  position: absolute;
+  /*position: absolute;
   display: block;
   float: none;
   width: 101%;
   height: auto;
   z-index: 99999;
   top: -10px;
-  background: #000;
+  background: #000;*/
 
 }​
 
@@ -28,12 +28,100 @@ body {
 }
 
 .nsx-logo {
-    z-index: 9999999;
+    z-index: 100;
     display: block;
     position: absolute;
     width: 65em;
     left: 62%;
+    top: 60%;
+}
+
+.modal {
+    position: absolute;
+    width: 2732px;
+    height: 2048px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999999;
+    display: none;
+}
+
+#video-1-content {
+    position: absolute;
+    width: 2000px;
+    height: 1300px;
     top: 50%;
+    left: 50%;
+    margin: -650px 0 0 -1000px;
+    z-index: 9999999;
+}
+
+.close-button {
+    position: absolute;
+    left: 96%;
+    top: 7%;
+    font-size: 5em;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+}
+
+.angled-line {
+    position: fixed;
+    width: 10px;
+    height: 3048px;
+    background-color: #fff;
+    transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+    z-index: 99999;
+    top: -500px;
+    left: 50%;
+    display: none;
+}
+
+.nsx-icons {
+  z-index: 100;
+  display: block;
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 5%;
+  text-align: center;
+}
+
+.icon {
+  width: 100px;
+  padding: 30px;
+  position: absolute;
+}
+
+.icon-circle {
+    top: 420px;
+    left: 140px;
+}
+
+.icon-airbag {
+    top: 300px;
+    left: 320px;
+}
+
+.icon-radar {
+    top: 210px;
+    left: 520px;
+}
+
+.icon-compass {
+    top: 210px;
+    left: 1900px;
+}
+
+.icon-globe {
+    top: 300px;
+    left: 2100px;
+}
+
+.icon-engine {
+    top: 420px;
+    left: 2270px;
 }
 
 #mainCont{

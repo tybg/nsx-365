@@ -15,25 +15,44 @@
 </head>
   <body>
 
+    <div class="modal" id="video-1">
+        <div class="close-button">X</div>
+
+        <iframe id="video-1-content" src="http://www.acura.com" frameborder="0"></iframe>
+    </div>
+
+    <div class="modal" id="video-2">
+        <div class="close-button">X</div>
+
+        <iframe id="video-1-content" src="http://www.honda.com" frameborder="0"></iframe>
+    </div>
 
 	<div class="splash">
       <!-- LEFT HERE IN CASE WE WANNA SPLASH IMAGE  -->
 		<!-- <img src="/public/assets/img/nsx-ray-splash.png"> -->
 	</div>
 
-  <div class="nsx-logo">
-    <img src="/public/assets/img/365/nsx-logo-code.svg">
-  </div>
+    <div class="nsx-logo">
+        <img src="/public/assets/img/365/nsx-logo-code.svg">
+    </div>
 
-  <div id="mainCont">
+    <div class="angled-line"></div>
 
-      <div id="firstCont">
+    <div class="nsx-icons">
+        <img class="icon icon-circle" src="/public/assets/img/365/icon-circles.png" data-video="video-1">
+        <img class="icon icon-airbag" src="/public/assets/img/365/icon-airbag.png">
+        <img class="icon icon-radar" src="/public/assets/img/365/icon-radar.png">
 
-          <div id="childElem"></div>
+        <img class="icon icon-compass" src="/public/assets/img/365/icon-compass.png">
+        <img class="icon icon-globe" src="/public/assets/img/365/icon-globe.png">
+        <img class="icon icon-engine" src="/public/assets/img/365/icon-engine.png" data-video="video-2">
+    </div>
 
-      </div>
-
-  </div>
+    <div id="mainCont">
+        <div id="firstCont">
+            <div id="childElem"></div>
+        </div>
+    </div>
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -52,7 +71,21 @@
             var offset = touch.pageX + 275;
 
             $('#firstCont').css('clip', 'rect(0px, '+offset+'px, 3268px, 0px)');
+            $('.angled-line').css('left', touch.pageX +'px');
         }, false);
+
+        $('.icon').on('click', function(e) {
+            var target = $(e.currentTarget);
+            $('.modal').each(function() {
+                if (target.attr('data-video') === $(this).attr('id')) {
+                    $(this).fadeIn(300);
+                }
+            });
+        });
+
+        $('.close-button').on('click', function() {
+            $(this).parent().fadeOut(300);
+        });
 
      //  	$(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
      //  	$(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
