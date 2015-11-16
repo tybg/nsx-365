@@ -1,4 +1,9 @@
 
+html, body {
+    min-width: 2732px;
+    min-height: 2048px;
+}
+
 body {
   margin: 0;
 }
@@ -23,10 +28,42 @@ body {
 }
 
 .nsx-logo {
-  z-index: 9999999;
-  display: block;
-  position: absolute;
-  width: 35em;
-  right: 30%;
-  top: 30%;
+    z-index: 9999999;
+    display: block;
+    position: absolute;
+    width: 65em;
+    left: 62%;
+    top: 50%;
+}
+
+#mainCont{
+    width: 2732px;
+    height: 2048px;
+    background: url('../img/365/new.png');
+    overflow: hidden;
+    position:relative;
+}
+#firstCont{
+    width: 3612px;
+    height: 3608px;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0px, 1732px, 3268px, 0px);
+    top: -575px;
+    left: -427px;
+    transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
+}
+#childElem{
+    width: 2732px;
+    height: 2048px;
+    background: url('../img/365/old.png');
+    position: relative;
+    color: #00F;
+    font-weight: bold;
+    top: 620px;
+    left: 310px;
+    overflow: hidden;
+    transform: rotate(-35deg);
+    -webkit-transform: rotate(-35deg);
 }

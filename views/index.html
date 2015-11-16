@@ -25,16 +25,17 @@
     <img src="/public/assets/img/365/nsx-logo-code.svg">
   </div>
 
-    <div class="">
-      <div class="">
-        <div class="twentytwenty-container">
-          <img src="/public/assets/img/365/old.png" />
-          <img src="/public/assets/img/365/new.png" />
-        </div>
+  <div id="mainCont">
+
+      <div id="firstCont">
+
+          <div id="childElem"></div>
+
       </div>
-    </div>
-    
-    
+
+  </div>
+
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="/public/assets/js/jquery.event.move.js"></script>
     <script src="/public/assets/js/jquery.twentytwenty.js"></script>
@@ -45,8 +46,16 @@
     		$(".splash").fadeOut(500);
     	});
 
-      	$(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
-      	$(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+        document.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+            var touch = e.touches[0];
+            var offset = touch.pageX + 275;
+
+            $('#firstCont').css('clip', 'rect(0px, '+offset+'px, 3268px, 0px)');
+        }, false);
+
+     //  	$(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+     //  	$(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
     });
     </script>
   </body>
