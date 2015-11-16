@@ -74,14 +74,14 @@
             $('.angled-line').css('left', touch.pageX +'px');
         }, false);
 
-        $('.icon').on('click', function(e) {
-            var target = $(e.currentTarget);
-            $('.modal').each(function() {
-                if (target.attr('data-video') === $(this).attr('id')) {
-                    $(this).fadeIn(300);
-                }
-            });
-        });
+        // $('.icon').on('click', function(e) {
+        //     var target = $(e.currentTarget);
+        //     $('.modal').each(function() {
+        //         if (target.attr('data-video') === $(this).attr('id')) {
+        //             $(this).fadeIn(300);
+        //         }
+        //     });
+        // });
 
         $('.close-button').on('click', function() {
             $(this).parent().fadeOut(300);
