@@ -24,6 +24,16 @@
   <div class="nsx-logo">
     <img src="/public/assets/img/365/nsx-logo-code.svg">
   </div>
+  <div class="nsx-icons">
+    <img class="icon icon-circle" src="/public/assets/img/365/icon-circles.png">
+    <img class="icon icon-airbag" src="/public/assets/img/365/icon-airbag.png">
+    <img class="icon icon-radar" src="/public/assets/img/365/icon-radar.png">
+
+    <img class="icon icon-compass" src="/public/assets/img/365/icon-compass.png">
+    <img class="icon icon-globe" src="/public/assets/img/365/icon-globe.png">
+    <img class="icon icon-engine" src="/public/assets/img/365/icon-engine.png">
+  </div>
+
 
     <div class="">
       <div class="">
@@ -41,12 +51,8 @@
     <script>
     $(window).load(function(){
 
-    	$(".splash").on('click', function(){
-    		$(".splash").fadeOut(500);
-    	});
-
-      	$(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
-      	$(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+    	$(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+    	$(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
     });
     </script>
   </body>
